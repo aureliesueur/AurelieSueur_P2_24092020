@@ -1,0 +1,756 @@
+/* GENERAL */
+
+body {
+    font-family: "Raleway", Verdana, sans-serif;
+}
+
+main {  
+    max-width: 1438px;
+    background-color: #FFF;
+    padding: 35px 35px;
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+h2 {
+    font-weight: bold;
+    font-stretch: ultra-condensed;
+    font-size: 1.3em;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Menu */
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#inscription {
+    display:none;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+#inscription a {
+    color: #0065FC;
+    text-decoration: none;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-right: 50px;
+}
+nav ul li:nth-child(3) {
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Animation du menu */
+nav ul li a:hover {
+    border-top: 2px solid #0065FC;
+    padding-top : 40px;
+    color: #0065FC;
+}
+
+/*RECHERCHE VILLE*/
+
+
+#recherche h1 {
+    margin-bottom: -5px;
+}
+
+#ville_cherchee {
+    display: flex;
+    height: 50px;
+    width: 420px;
+    border-radius: 15px;
+    margin-right:0px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#bouton {
+    background-color: #0065FC;
+    border-radius: 0 15px 15px 0;
+    height: 70%;
+    width: 135px;
+    color: white;
+    font-size: 1em;
+    margin-left: 0px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#logo_search {
+    display:none;
+}
+
+/* Animation du bouton */
+#bouton:hover {
+    cursor: pointer;
+    background-color: #DEEBFF; 
+    color: black;
+}
+
+#bouton:active {
+    cursor: pointer;
+    background-color: #DEEBFF; 
+    color: #0065FC;
+    font-weight: bold;
+    border: 1px solid #0065FC;
+}
+
+input {
+    height: 93%;
+    width: 230px;
+    color: black;
+    font-size: 1em;
+    border: 0.5px solid #F2F2F2;
+}
+
+/* Animation de l'input*/
+input:focus {
+    outline: none; 
+}
+
+.fa-map-marker-alt {
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    height: 70%;
+    width: 52px;
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 15px;
+}
+
+
+/*FILTRES*/
+
+#zone_filtrage {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#liste_filtres {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.filtres {
+    margin-left: 30px;
+    border: 2px solid #DDD;
+    border-radius: 25px;
+    height: 45px;
+    display: flex;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.icone_bleue {
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 105%;
+    margin-left: -5px;
+}
+
+.filtres i {
+    font-size: 1.2em;
+    color: #0065FC;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.filtres h2 {
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 0px;
+    font-size: 1em;
+}
+
+/* Animation filtres au survol */
+.filtres:hover {
+    cursor: pointer;
+    background-color: #DEEBFF; 
+    color: #0065FC;
+    border: 2px solid #DEEBFF;
+}
+
+#info {
+    margin-bottom: 40px;
+    font-size: 0.9em;
+}
+
+.fa-info {
+    color: #0065FC;
+    border: 1px solid #DDD;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+/*HEBERGEMENTS*/
+
+#hebergements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*HEBERGEMENTS TROUVES*/
+
+#hebergements_trouves {
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 10px 0px 0px 20px;
+    max-width: 1000px;
+}
+
+#hebergements_trouves h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#liste_hotels_trouves {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+}
+
+.hotel {
+    width: 232px;
+    height: 196px;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #DDD;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.hotel a:active {
+    border: 2px solid #0065FC; /*ne marche pas */
+}
+
+.hotel img {
+    width: 226px;
+    height: 111px;
+    border-radius: 20px 20px 0 0;
+    padding: 3px;   
+}
+
+.hotel .details {
+    padding-left: 20px;
+    margin-top: -10px;
+    line-height: 70%;
+    font-size: 0.9em;
+}
+
+.hotel .details p {
+    font-size: 1em;
+    line-height: 10px;
+}
+
+.fa-star {
+    font-size: 0.8em;
+    font-stretch: condensed;
+    color: #0065FC;
+    line-height: 10px;
+}
+
+.hotel .fa-star {
+    line-height: 10px;
+}
+
+.grey {
+    color: #DDD;
+}
+
+#afficher {
+    font-size: 1.1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*HEBERGEMENTS POPULAIRES*/
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+#liste_populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 10px 0px 10px;  
+}
+
+#titre_populaire {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 20px 20px 20px;
+}
+
+.fa-chart-line {
+    font-size: 1.2em;
+    padding-top: 20px;
+}
+
+.hotel_populaire {
+    width: 320px;
+    height: 143px;
+    background-color: #FFF;
+    box-shadow: 2px 2px 2px #DDD;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.hotel_populaire img {
+    float: left;
+    width: 118px;
+    height: 133px;
+    border-radius: 20px 0 0 20px;
+    padding: 3px 20px 3px 3px;  
+    margin-top: 2px;
+}
+
+.hotel_populaire .details {
+    line-height: 20px;
+}
+
+.hotel_populaire .details p {
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.hotel_populaire h3 {
+    font-size: 1.1em;
+}
+
+/* Suppression des caractéristiques standard des liens*/
+.hotel a, .hotel_populaire a {
+    text-decoration: none;
+    color:black;
+}
+
+/*ACTIVITES*/
+
+#titre_activites {
+    margin-top: 40px;
+}
+
+#activites {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.duo_activites {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activite {
+    width: 280px;
+    background-color: #FFF;
+    margin-right: 5px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #DDD;
+}
+
+.activite img {
+    width: 100%;;
+    border-radius: 20px 20px 0 0;  
+}
+
+.unique {
+    height: 446px;
+}
+
+.unique img {
+    height: 390px;
+}
+
+.titre {
+    display: inline-block;
+    max-height: 53px;
+    padding-left: 20px;
+    font-size: 0.9em;
+}
+
+.activite img {
+    object-fit: cover;
+}
+
+#pomegues {
+    height: 237px;
+}
+
+#frioul {
+    height: 160px;
+}
+
+#lagarde {
+    height: 192px;
+}
+
+#longchamp {
+    height: 206px;
+}
+
+#pomegues img {
+    height: 178px;
+}
+
+#frioul img {
+    height: 105px;
+}
+
+#lagarde img {
+    height: 134px;
+}
+
+#longchamp img {
+    height: 151px;
+}
+
+#lagarde, #pomegues {
+    margin-bottom: 40px;
+}
+
+/*Animation des liens au survol des hôtels et des activités */
+.hotel a:hover, .hotel_populaire a:hover, .activite a:hover, .unique a:hover {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #0065FC;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #F2F2F2;
+    padding-top: 30px;
+    margin: 0px;
+}
+
+#container_footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-right: 100px;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left:0px;
+}
+
+footer ul li {
+    padding-bottom: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+/* MEDIA QUERIES POUR ADAPTER LE SITE A UN ECRAN DE MOBILE*/
+
+@media screen and (max-width: 500px) { 
+    /*Refonte des couleurs de backgrounds*/
+     body {
+        background-color: #DDD;
+    }
+    main {
+        background-color: #FFF;
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+    /*Refonte de l'entête et du menu*/
+    #menu {
+        margin-top: 30px;
+    }
+    header {
+        border-bottom: 2px solid #F2F2F2;
+        padding-bottom: 0px;
+    } 
+    nav ul {
+        padding-left: 0px;
+    }
+    .element_menu:nth-child(2) {
+        margin-left: 70px;
+    }
+   /*Masquage du troisième élément "s'inscrire", 
+    et révélation du nouvel élément correctement placé, jusqu'ici invisible*/
+    .element_menu:nth-child(3) {
+        display: none;
+    }
+    #inscription {
+        display: block;
+    }
+    /*Changement du surlignage en soulignage*/
+    nav ul li a:hover {
+        border-bottom: 2px solid #0065FC;
+        border-top: none;
+        padding-bottom: 20px;
+    }
+    /*Masquage du bouton et remplacement par icône de recherche jusqu'ici invisible*/
+    #bouton {
+        display: none;
+    }
+    #logo_search {
+        display: block;
+        transform: translateX(-40px);
+        background-color: #0065FC;
+        border-radius: 15px;
+        height: 70%;
+        width: 52px;
+        margin-left: 0px;
+        text-align: center;
+        padding-top: 15px;
+        color: white;
+        font-size: 1.2em;
+    }
+    /* Animation de l'icône recherche */
+    #logo_search:hover {
+        cursor: pointer;
+        background-color: #DEEBFF; 
+        color: black;
+    }
+    #logo_search:active {
+        cursor: pointer;
+        background-color: #DEEBFF; 
+        color: #0065FC;
+        font-weight: bold;
+        border: 1px solid #0065FC;
+    }
+    /*Repositionnement des filtres*/
+    .filtres {
+    margin-left: 10px;
+    }
+    .filtres h2 {
+        font-size: 0.9em;
+    } 
+    #info {
+        font-size: 0.8em;
+    }
+    /*Repositionnement et mise en page des différentes zones d'hébergements*/
+    
+    #hebergements_trouves h2 {
+        margin-top: 10px;
+        padding-left: 10px;  
+    }
+    #hebergements {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    aside {
+        margin-left: 0px;
+        border-radius: 0px;
+        background: #F2F2F2;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    #hebergements_trouves {
+        background-color: #FFF;
+        border-radius: 0px;
+    }
+    #liste_hotels_trouves {
+        margin-left: 25px;
+    }
+    #afficher {
+        padding-top: 20px;
+    }
+    /*Redimensionnement des cases hôtels*/
+    .hotel, .hotel_populaire {
+        width: 320px;
+    }
+    #hebergements_trouves img {
+        width: 310px;
+        padding: 5px;
+    }
+    #titre_populaire {
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    /*Repositionnement et mise en page de la zone d'activités*/
+    #titre_activites {
+        margin-top: 0px;
+        padding-left: 10px;
+    }
+    #activites {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px; 
+        margin-left: 30px;
+        margin-bottom: 0px;
+    }
+    #lagarde, #pomegues, #longchamp, .activite {
+        margin-bottom: 20px;
+        width: 320px;
+    }
+    #lagarde, #pomegues, #longchamp, .unique {
+        height: 158px;
+    }
+    .activite img, #pomegues img, #lagarde img, #longchamp img {
+        height: 105px;
+    }
+    .activite .titre, #pomegues .titre, #lagarde .titre {
+        display: inline-block;
+        max-height: 53px;
+    }
+    .duo_activites {
+        justify-content:flex-start;
+    }
+    /*Repositionnement du footer*/
+    footer {
+        padding-top: 20px;
+        width: 100%;
+        margin-left: 0px;
+    }
+    #container_footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        margin-left: 20px;
+    }
+    .footer_menu {
+        margin-bottom: 0px;
+        margin-left: 20px;
+        font-size: 0.8em;
+        line-height: 10px;
+    }
+    footer ul li {
+        font-size: 0.8em;
+    }
+}
+
+/* MEDIA QUERIES POUR ADAPTER LE SITE A UN ECRAN DE TABLETTE*/
+
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+     #main {
+         padding-bottom: 0px;
+    }
+    #hebergements {
+        flex-direction: column-reverse;
+        
+    }
+    #liste_populaires {
+        margin: auto;
+    }
+    #titre_populaire {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    aside {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    #hebergements_trouves {
+        padding: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #hebergements_trouves h2 {
+        padding-left: 30px;
+        margin-top: 20px;
+    }
+    #liste_hotels_trouves {
+        flex-direction: column;
+        align-items: center; 
+    }
+    /*Redimensionnement des cases hôtels*/
+    .hotel {
+        width: 341px;
+    }
+    #hebergements_trouves img {
+        width: 330px;
+        padding: 5px;
+    }
+    #afficher {
+        padding-bottom: 0px;
+    }
+    /*Repositionnement et mise en page de la zone d'activités*/
+    #titre_activites {
+        margin-top: 30px;
+        padding-left: 50px;
+    }
+    #activites {
+        flex-direction: column;
+        padding-bottom: 0px; 
+        margin-bottom: 0px;
+    }
+    #lagarde, #pomegues, #longchamp, .activite {
+        margin-bottom: 20px;
+    }
+    #lagarde, #pomegues, #longchamp, .unique {
+        height: 158px;
+    }
+    .activite img, #pomegues img, #lagarde img, #longchamp img {
+        height: 105px;
+    }
+    .activite .titre, #pomegues .titre, #lagarde .titre {
+        display: inline-block;
+        max-height: 53px;
+    }
+    .duo_activites {
+        justify-content:flex-start;
+    }
+    /*Repositionnement du footer*/
+    .footer_menu {
+        margin-bottom: 0px;
+        margin-left: 30px;
+    }
+    footer ul li {
+        font-size: 0.8em;
+    }
+   
+}
