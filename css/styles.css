@@ -77,7 +77,6 @@ nav ul li a:hover {
 
 /*RECHERCHE VILLE*/
 
-
 #recherche h1 {
     margin-bottom: -5px;
 }
@@ -220,6 +219,7 @@ input:focus {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /*HEBERGEMENTS TROUVES*/
@@ -589,6 +589,7 @@ footer ul li a {
     }
     #hebergements {
         flex-direction: column-reverse;
+        flex-wrap: wrap;
         align-items: center;
     }
     aside {
@@ -680,7 +681,7 @@ footer ul li a {
     }
     #hebergements {
         flex-direction: column-reverse;
-        
+        flex-wrap: nowrap;      
     }
     #liste_populaires {
         margin: auto;
@@ -751,6 +752,16 @@ footer ul li a {
     }
     footer ul li {
         font-size: 0.8em;
+    } 
+}
+
+/* MEDIA QUERIES POUR ADAPTER LE SITE A UN DESKTOP PLUS GRAND, SURTOUT POUR FIXER LA COEXISTENCE DES DEUX BLOCS HOTELS TROUVES ET HOTELS POPULAIRES*/
+
+@media screen and (min-width: 1224px) {
+    #hebergements {
+        flex-wrap: nowrap;
     }
-   
+    #activites {
+        flex-wrap: nowrap;
+    }
 }
