@@ -585,7 +585,7 @@ footer ul li a {
     
     #hebergements_trouves h2 {
         margin-top: 10px;
-        padding-left: 10px;  
+        padding-left: 0px;  
     }
     #hebergements {
         flex-direction: column-reverse;
@@ -594,6 +594,7 @@ footer ul li a {
     }
     aside {
         margin-left: 0px;
+        transform: translateX(-15px);
         border-radius: 0px;
         background: #F2F2F2;
         padding-left: 48px;
