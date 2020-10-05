@@ -375,8 +375,7 @@ aside {
 
 #activites {
     margin-top: 30px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -582,30 +581,39 @@ footer ul li a {
         font-size: 0.8em;
     }
     /*Repositionnement et mise en page des différentes zones d'hébergements*/
-    
-    #hebergements_trouves h2 {
-        margin-top: 10px;
-        padding-left: 0px;  
+    #resultats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
     }
     #hebergements {
         flex-direction: column-reverse;
-        flex-wrap: wrap;
         align-items: center;
     }
+    #hebergements_trouves h2 {
+        margin-top: 10px;
+        margin-left: 40px;
+    }
     aside {
-        margin-left: 0px;
-        transform: translateX(-15px);
         border-radius: 0px;
         background: #F2F2F2;
         padding-left: 48px;
         padding-right: 48px;
+        margin-left: 0px;
+    }
+    #titre_populaire {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        margin-left: -10px;
+        margin-right: -10px;
     }
     #hebergements_trouves {
         background-color: #FFF;
         border-radius: 0px;
+        padding-left: 0px;
     }
     #liste_hotels_trouves {
-        margin-left: 25px;
+        margin-left: 56px;
     }
     #afficher {
         padding-top: 20px;
@@ -618,20 +626,15 @@ footer ul li a {
         width: 310px;
         padding: 5px;
     }
-    #titre_populaire {
-        margin-bottom: 0px;
-        margin-top: 20px;
-    }
     /*Repositionnement et mise en page de la zone d'activités*/
     #titre_activites {
         margin-top: 0px;
-        padding-left: 10px;
+        margin-left: -15px;
     }
     #activites {
         flex-direction: column;
         align-items: center;
         padding-bottom: 10px; 
-        margin-left: 30px;
         margin-bottom: 0px;
     }
     #lagarde, #pomegues, #longchamp, .activite {
@@ -723,10 +726,11 @@ footer ul li a {
     /*Repositionnement et mise en page de la zone d'activités*/
     #titre_activites {
         margin-top: 30px;
-        padding-left: 50px;
+        margin-left: 30px;
     }
     #activites {
         flex-direction: column;
+        justify-content: center;
         padding-bottom: 0px; 
         margin-bottom: 0px;
     }
