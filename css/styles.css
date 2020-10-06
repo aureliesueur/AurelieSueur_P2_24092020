@@ -8,6 +8,7 @@ main {
     
     background-color: #FFF;
     padding: 35px 35px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -238,7 +239,7 @@ input:focus {
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 10px 0px 0px 0px;
-    width: 67%;
+    flex:2;
 }
 
 #hebergements_trouves h2 {
@@ -280,14 +281,19 @@ input:focus {
 .hotel .details {
     padding-left: 5%;
     font-size: 70%;
-    line-height: 70%;
+    line-height: 60%;
     height: 40%;
     width: 100%;
 }
 
+.hotel h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
 .hotel .details p {
-    font-size: 1.2em;
-    line-height: 10px;
+    font-size: 1em;
+    line-height: 60%;
 }
 
 .hotel .fa-star {
@@ -320,13 +326,13 @@ aside {
     background-color: #F2F2F2;
     border-radius: 20px;
     margin-left: 20px;
-    width: 33%;
+    flex: 1;
 }
 
 #liste_populaires {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     padding: 0px;  
     margin-right: 30px;
     margin-left: 30px;
@@ -382,7 +388,9 @@ aside {
 }
 
 .hotel_populaire h3 {
-    font-size: 1em;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* Suppression des caractéristiques standard des liens*/ 
@@ -717,12 +725,13 @@ footer ul li a {
 
 /* MEDIA QUERIES POUR ADAPTER LE SITE A UN ECRAN DE TABLETTE*/
 
-@media screen and (min-width : 768px) and (max-width : 1024px) {
+@media screen and (min-width : 480px) and (max-width : 1024px) {
      #main {
          padding-bottom: 0px;
     }
     #hebergements {
         flex-direction: column-reverse;
+        align-items: center;
         flex-wrap: nowrap;      
     }
     #liste_populaires {
@@ -822,7 +831,7 @@ footer ul li a {
 
 /* MEDIA QUERIES POUR ADAPTER LE SITE A UN DESKTOP PLUS GRAND, SURTOUT POUR FIXER LA COEXISTENCE DES DEUX BLOCS HOTELS TROUVES ET HOTELS POPULAIRES*/
 
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1024px) {
     #hebergements {
         flex-wrap: nowrap;
     }
